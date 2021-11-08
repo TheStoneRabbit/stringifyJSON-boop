@@ -15,10 +15,10 @@ function main(state){
         //move everything to one line
         inputStr = inputStr.replace(/^\s+|\s+$/gm,'');
         inputStr = inputStr.replace(/(\r\n|\n|\r)/gm, "");
-        // Keeps spaces in quotes, removes other spaces.
+        // Keeps spaces only in quotes, removes other spaces.
         inputStr = inputStr.replace(/[ ]+(?=[^"]*(?:"[^"]*"[^"]*)*$)/g, "");
 
-        // begin stringify for code
+        // begin stringify for JSON
         inputStr = inputStr.replaceAll('{"', '{\\"')
         inputStr = inputStr.replaceAll('":', '\\":');
         inputStr = inputStr.replaceAll(',"', ',\\"');
