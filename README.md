@@ -26,3 +26,4 @@ Turns into this:
 "{\"api\":1,\"name\":\"Stringify JSON\",\"description\":\"Adds quotes and removes escape characters to make a single String of JSON.\",\"author\":\"Mason Lapine\",\"icon\":\"quote\",\"tags\":\"json,convert,quote\",\"bias\":-0.2}"
 ```
 
+To validate that this works, you can put this single string back into a JSON.parse(theStringAbove) and it should return the pretty JSON shown in the first code block.
