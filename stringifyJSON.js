@@ -15,7 +15,8 @@ function main(state){
         //move everything to one line
         inputStr = inputStr.replace(/^\s+|\s+$/gm,'');
         inputStr = inputStr.replace(/(\r\n|\n|\r)/gm, "");
-        inputStr = inputStr.replace(/\s/g, "")
+        // Keeps spaces in quotes, removes other spaces.
+        inputStr = inputStr.replace(/[ ]+(?=[^"]*(?:"[^"]*"[^"]*)*$)/g, "");
 
         // begin stringify for code
         inputStr = inputStr.replaceAll('{"', '{\\"')
