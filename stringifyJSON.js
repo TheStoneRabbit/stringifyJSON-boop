@@ -2,7 +2,7 @@
 {
     "api":1,
     "name":"Stringify JSON",
-    "description":"Adds escape characters to JSON",
+    "description":"Adds quotes and removes escape characters to make a single String of JSON.",
     "author":"Mason Lapine",
     "icon":"quote",
     "tags":"json,convert,quote",
