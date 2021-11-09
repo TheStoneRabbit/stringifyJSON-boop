@@ -12,6 +12,7 @@
 function main(state){
     try {
         let inputStr = state.text;
+        inputStr = '"' + inputStr;
         //move everything to one line
         inputStr = inputStr.replace(/^\s+|\s+$/gm,'');
         inputStr = inputStr.replace(/(\r\n|\n|\r)/gm, "");
@@ -27,7 +28,7 @@ function main(state){
         inputStr = inputStr.replaceAll('"}', '\\"}');
         inputStr = inputStr.replaceAll('"]', '\\"]');
         inputStr = inputStr.replaceAll('["', '[\\"');
-        state.fullText = inputStr;
+        state.fullText = inputStr + '"';
     }
     catch (error){
         state.fullText = error;
